@@ -119,3 +119,17 @@ footer {
 .txt-medium {
     font-weight: 500;
 }
+
+span.highlight {
+    font-weight: 600;
+    color: #0073b1;
+}
+
+article.padding {
+    padding: 10px 20px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}
