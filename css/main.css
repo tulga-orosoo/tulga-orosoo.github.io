@@ -119,3 +119,7 @@ footer {
     right: 0;
     top: 15px;
 }
+
+.txt-medium {
+    font-weight: 500;
+}
