@@ -1,0 +1,77 @@
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    -moz-osx-font-smoothing: grayscale;
+    color: #404040;
+    font: normal 11px / 16px Georgia, Garamond, Helvetica, Arial, sans-serif;
+    background-color: #fff;
+}
+
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.section {
+    margin: 10px 0;
+}
+
+.secton.border-top {
+    margin-top: 10px;
+    border-top: 1px solid #222;
+}
+
+.header {
+    color: #A4A400;
+    background-color: #F0F0F0;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    
+}
+
+h1 {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+}
+
+a {
+    color: #A4A400;
+}
+
+.underline {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.strikeout {
+    text-decoration: line-through;
+}
+
+.copyright {
+    width: 300px;
+    text-align: right;
+}
+
+.comment {
+    margin: 10px 20px;
+    
+    background-color: #FFFFA8;
+    font-style: italic;
+}
+
+.copyright {
+    font-family: "Lucida Console", Monaco, monospace;
+}
