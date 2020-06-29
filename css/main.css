@@ -74,10 +74,6 @@ img {
     max-width: 100%;
 }
 
-h2.name {
-
-}
-
 article {
     box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
     transition: box-shadow 83ms;
@@ -87,11 +83,11 @@ article {
     position: relative;
 }
 
-main {
+.main {
     padding: 0px 30px 30px 250px;
 }
 
-main>.nav {
+.main>.nav {
     border-top: 1px solid #ebebeb;
 }
 
