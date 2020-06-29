@@ -54,6 +54,7 @@ h3 {
 
 .profile {
     width: 200px;
+    height: 200px;
     overflow: hidden;
     border-radius: 50%;
     border: 3px solid #fff;
@@ -61,6 +62,7 @@ h3 {
     margin-left: 20px;
     margin-bottom: 20px;
     float: left;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
 }
 
 .profile>img {
@@ -104,4 +106,16 @@ a:hover, a:visited {
 
 .nav-list a {
     font-weight: 500;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    position: relative;
+    margin-top: 25px;
+}
+
+.validator {
+    position: absolute;
+    right: 0;
+    top: 15px;
 }
