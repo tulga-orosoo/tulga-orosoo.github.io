@@ -1,0 +1,107 @@
+/*! CS472 - Web Application Programming -  Assignment */
+/*! By Tulga Orosoo */
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    -moz-osx-font-smoothing: grayscale;
+    color: #333;
+    font: normal 15px / 26px 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+::-moz-selection {
+    background: #ccc;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ccc;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+.container {
+    max-width: 920px;
+    padding: 0 35px;
+}
+
+.container-center {
+    margin: 0 auto;
+}
+
+.cover {
+    height: 230px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile {
+    width: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-top: -100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.profile>img {
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2.name {
+
+}
+
+article {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+    transition: box-shadow 83ms;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+main {
+    padding: 0px 30px 30px 250px;
+}
+
+main>.nav {
+    border-top: 1px solid #ebebeb;
+}
+
+a {
+    color: #0073b1;
+    text-decoration: none;
+}
+
+a:hover, a:visited {
+    color: #006097;
+}
+
+.nav-list a {
+    font-weight: 500;
+}
