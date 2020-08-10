@@ -107,14 +107,24 @@
     });
     $('#loadTask').click(function (evt) {
       evt.preventDefault();
+      let date = new Date();
       let object = {
-        task: 'TaskA',
-        requiredBy: '2020-08-04',
+        task: 'Default task name',
+        requiredBy: getToday(),
         category: 'Personal'
       }
       var task = $('form').fromObject(object);
     });
   });
+
+  function getToday() {
+    let date = new Date();
+    let fullMonth = date.getMonth() + 1;
+    let day = date.getDate();
+    let monthStr = fullMonth > 9 ? fullMonth : '0' + fullMonth;
+    let dayStr = day > 9 ? day : '0' + day;
+    return date.getFullYear() + '-' + monthStr + '-' + dayStr;
+  }
 
 
   (function ($) {
