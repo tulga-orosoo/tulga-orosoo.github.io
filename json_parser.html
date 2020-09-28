@@ -48,7 +48,7 @@ function getUserInfo() {
   
   var userId = $("#user_id").val();
     
-    $.ajax("http://jsonplaceholder.typicode.com/users/" + userId, {
+    $.ajax("https://jsonplaceholder.typicode.com/users/" + userId, {
 		"type": "get",
     }).done(displayUserInfo);
 }
@@ -56,13 +56,13 @@ function getUserInfo() {
 function getUserPosts() {
     var userId = $("#user_id").val();
     
-    $.ajax("http://jsonplaceholder.typicode.com/posts?userId=" + userId, {
+    $.ajax("https://jsonplaceholder.typicode.com/posts?userId=" + userId, {
 		"type": "get",
     }).done(displayPosts);
 }
 
 function getArticleComments(articleId) {
-    $.ajax("http://jsonplaceholder.typicode.com/comments?postId=" + articleId, {
+    $.ajax("https://jsonplaceholder.typicode.com/comments?postId=" + articleId, {
 		"type": "get",
     }).done((data) => displayComments(data, articleId));
 }
