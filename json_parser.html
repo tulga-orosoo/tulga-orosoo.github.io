@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON lab - Course CS472</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+  <style>
+    h4 {
+      margin: 10px 0 5px 0;
+    }
+    .comments {
+      padding-left: 20px;
+    }
+  </style>
+  
+</head>
+<body>
+  
+  <p>Enter user ID </p>
+  <p><input id='user_id' type='text' name='user_id'  /></p> 
+  <p><input id='send' type='button' value='Send'  /></p>
+  <h3>User info</h3>
+  <div id='user_info' >
+
+  </div>
+  <hr>
+  <h3>User posts</h3>
+  <div id='user_posts' >
+
+  </div>
+
+</body>
+</html>
+
+
+<script>
+  $(function() {
+    $("#send").click(() => {
+      getUserInfo();
+      getUserPosts();
+    });
+});
+
+function getUserInfo() {
+  
+  var userId = $("#user_id").val();
+    
+    $.ajax("http://jsonplaceholder.typicode.com/users/" + userId, {
+		"type": "get",
+    }).done(displayUserInfo);
+}
+
+function getUserPosts() {
+    var userId = $("#user_id").val();
+    
+    $.ajax("http://jsonplaceholder.typicode.com/posts?userId=" + userId, {
+		"type": "get",
+    }).done(displayPosts);
+}
+
+function getArticleComments(articleId) {
+    $.ajax("http://jsonplaceholder.typicode.com/comments?postId=" + articleId, {
+		"type": "get",
+    }).done((data) => displayComments(data, articleId));
+}
+
+function displayComments(data, articleId) {
+  console.log(data);
+  console.log(articleId);
+
+  var comments = data.reduce((html, d) => html += ('<h4>'+d.name+'</h4><p style="margin: 0;">'+ d.body +'</p>'), '');
+  $("#comments_" + articleId).html('<h4>Comments</h4>' + comments);   
+    
+}
+
+function displayUserInfo(data) {
+  console.log(data);
+  var info = '<p><strong>Name: </strong> '+ data.name + '<br><strong>Email: </strong>' + data.email +'</p>';
+  $("#user_info").html(info);
+    
+}
+
+function displayPosts(data) {
+  console.log(data);
+  var posts = data.reduce((html, d) => html += ('<h4>'+d.title+'</h4><p style="margin: 0;">'+ d.body +'</p><button onclick="showArticleComments('+d.id+')">Show comments</button><div id="comments_'+d.id+'" class="comments"></div>'), '');
+  $("#user_posts").html(posts);   
+}
+
+function showArticleComments(articleId) {
+  getArticleComments(articleId);
+}
+</script>
